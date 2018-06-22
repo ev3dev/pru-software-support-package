@@ -37,7 +37,7 @@
  *  Summary	:	A virtual queue implementation to simplify vring usage.
  *
  *  Notes	:
- *  - Implementaion of the interface described in "pru_virtqueue.h"
+ *  - Implementation of the interface described in "pru_virtqueue.h"
  */
 #include <pru_virtqueue.h>
 
@@ -46,11 +46,20 @@ volatile register uint32_t __R31;
 /* bit 5 is the valid strobe to generate system events with __R31 */
 #define INT_ENABLE	(1 << 5)
 
+#ifdef AM18XX
+/* __R31[4:0] can generate 31-0 which maps to system events 63-32
+ * e.g. to generate PRU-ICSS System Event 33 (pru_mst_intr[1])
+ * __R31 = (INT_ENABLE | (33 - INT_OFFSET));
+ */
+#define INT_OFFSET	32
+#else
+
 /* __R31[3:0] can generate 15-0 which maps to system events 31-16 
  * e.g. to generate PRU-ICSS System Event 17 (pru_mst_intr[1])
  * __R31 = (INT_ENABLE | (17 - INT_OFFSET));
  */
 #define INT_OFFSET	16
+#endif
 
 void pru_virtqueue_init(
 	struct pru_virtqueue 		*vq,

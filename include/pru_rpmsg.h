@@ -268,7 +268,7 @@ int16_t pru_rpmsg_channel(
     enum pru_rpmsg_ns_flags	flags,
     struct pru_rpmsg_transport	*transport,
     char			*name,
-#ifndef AM18XX
+#ifdef TI_LINUX
     char			*desc,
 #endif
     int32_t			port

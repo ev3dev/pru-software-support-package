@@ -75,10 +75,17 @@
 /* Return value indication that an invalid event number was given */
 #define PRU_RPMSG_INVALID_EVENT			-4
 
+#ifdef AM18XX
+/* Max PRU-ICSS system event number for pru_mst_intr */
+#define MAX_VALID_EVENT				63
+/* Min PRU-ICSS system event number for pru_mst_intr */
+#define MIN_VALID_EVENT				32
+#else
 /* Max PRU-ICSS system event number for pru_mst_intr */
 #define MAX_VALID_EVENT				31
 /* Min PRU-ICSS system event number for pru_mst_intr */
 #define MIN_VALID_EVENT				16
+#endif
 
 /* The maximum size of the channel name and description */
 #define RPMSG_NAME_SIZE 			32
@@ -261,7 +268,9 @@ int16_t pru_rpmsg_channel(
     enum pru_rpmsg_ns_flags	flags,
     struct pru_rpmsg_transport	*transport,
     char			*name,
+#ifndef AM18XX
     char			*desc,
+#endif
     int32_t			port
 );
 

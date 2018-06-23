@@ -54,7 +54,10 @@ struct pru_rpmsg_hdr {
 
 struct pru_rpmsg_ns_msg {
 	char		name[RPMSG_NAME_SIZE];
+#ifndef AM18XX
+	/* mainline Linux kernel does not have this field */
 	char		desc[RPMSG_NAME_SIZE];
+#endif
 	uint32_t	addr;
 	uint32_t	flags;
 };
@@ -167,7 +170,9 @@ int16_t pru_rpmsg_channel(
     enum pru_rpmsg_ns_flags	flags,
     struct pru_rpmsg_transport	*transport,
     char			*name,
+#ifndef AM18XX
     char			*desc,
+#endif
     int32_t			port
 )
 {
@@ -176,7 +181,9 @@ int16_t pru_rpmsg_channel(
 
 	for (i = 0; i < RPMSG_NAME_SIZE; i++) {
 		ns_msg.name[i] = name[i];
+#ifndef AM18XX
 		ns_msg.desc[i] = desc[i];
+#endif
 	}
 	ns_msg.addr = port;
 	ns_msg.flags = flags;

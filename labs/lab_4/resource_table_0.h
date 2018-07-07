@@ -85,7 +85,7 @@ struct my_resource_table am335x_pru_remoteproc_ResourceTable = {
 	},
 
 	{
-		TYPE_CUSTOM, TYPE_PRU_INTS,
+		TYPE_POSTLOAD_VENDOR, TYPE_PRU_INTS,
 		sizeof(struct fw_rsc_custom_ints),
 		{ /* PRU_INTS version */
 			0x0000,

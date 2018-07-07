@@ -45,8 +45,8 @@
 #define TYPE_DEVMEM		1
 #define TYPE_TRACE		2
 #define TYPE_VDEV		3
-#define TYPE_INTMEM		4
-#define TYPE_CUSTOM		5
+#define TYPE_PRELOAD_VENDOR	4
+#define TYPE_POSTLOAD_VENDOR	5
 
 union fw_custom {
 	/* add custom resources here */

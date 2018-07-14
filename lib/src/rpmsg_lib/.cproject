@@ -86,6 +86,7 @@
 							<tool id="com.ti.ccstudio.buildDefinitions.PRU_2.1.library.compilerRelease.1719852639" name="PRU Compiler" superClass="com.ti.ccstudio.buildDefinitions.PRU_2.1.library.compilerRelease">
 								<option id="com.ti.ccstudio.buildDefinitions.PRU_2.1.compilerID.DEFINE.580501313" name="Pre-define NAME (--define, -D)" superClass="com.ti.ccstudio.buildDefinitions.PRU_2.1.compilerID.DEFINE" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="am3359"/>
+									<listOptionValue builtIn="false" value="TI_LINUX"/>
 									<listOptionValue builtIn="false" value="pru0"/>
 								</option>
 								<option id="com.ti.ccstudio.buildDefinitions.PRU_2.1.compilerID.SILICON_VERSION.1567344157" name="Silicon version (--silicon_version, -v)" superClass="com.ti.ccstudio.buildDefinitions.PRU_2.1.compilerID.SILICON_VERSION" value="com.ti.ccstudio.buildDefinitions.PRU_2.1.compilerID.SILICON_VERSION.3" valueType="enumerated"/>

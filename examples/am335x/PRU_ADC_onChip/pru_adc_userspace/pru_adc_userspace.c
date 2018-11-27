@@ -122,7 +122,7 @@ static uint16_t readADCchannel(const char *adcChannel)
 
 		FILE *sysfs_node;
 		char firmware[] = "/sys/class/remoteproc/remoteproc1/firmware";
-		char firmwareName[] = "PRU_ADC.out";
+		char firmwareName[] = "PRU_ADC_onChip.out";
 		sysfs_node = fopen(firmware, "r+");
 		if (sysfs_node == NULL) {
 			printf("cannot open firmware sysfs_node");
@@ -194,7 +194,7 @@ static uint16_t readADCchannel(const char *adcChannel)
 	}
 
 	/* read voltage and channel back */
-	size_t freadResult = read(pfds[0].fd, payload, MAX_BUFFER_SIZE);
+	size_t freadResult = read(pfds[0].fd, payload, RPMSG_MESSAGE_SIZE);
 	returnedVoltage = ((shared_struct *)payload)->voltage;
 
 	close(pfds[0].fd);

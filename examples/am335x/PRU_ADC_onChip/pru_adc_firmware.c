@@ -175,11 +175,13 @@ void init_adc()
 	 * Mode = 0; SW enabled, one-shot
 	 * Averaging = 0x3; 8 sample average
 	 * SEL_INP_SWC_3_0 = 0x4 = Channel 5
+         * SEL_INM_SWC_3_0 = 1xxx = VREFN (reduces noise in single ended mode)
 	 * use FIFO0
 	 */
 	ADC_TSC.STEPCONFIG1_bit.MODE = 0;
 	ADC_TSC.STEPCONFIG1_bit.AVERAGING = 3;
 	ADC_TSC.STEPCONFIG1_bit.SEL_INP_SWC_3_0 = 4;
+	ADC_TSC.STEPCONFIG1_bit.SEL_INM_SWC_3_0 = 8;
 	ADC_TSC.STEPCONFIG1_bit.FIFO_SELECT = 0;
 
 	/*
@@ -187,11 +189,13 @@ void init_adc()
 	 * Mode = 0; SW enabled, one-shot
 	 * Averaging = 0x3; 8 sample average
 	 * SEL_INP_SWC_3_0 = 0x5 = Channel 6
+         * SEL_INM_SWC_3_0 = 1xxx = VREFN (reduces noise in single ended mode)
 	 * use FIFO0
 	 */
 	ADC_TSC.STEPCONFIG2_bit.MODE = 0;
 	ADC_TSC.STEPCONFIG2_bit.AVERAGING = 3;
 	ADC_TSC.STEPCONFIG2_bit.SEL_INP_SWC_3_0 = 5;
+	ADC_TSC.STEPCONFIG2_bit.SEL_INM_SWC_3_0 = 8;
 	ADC_TSC.STEPCONFIG2_bit.FIFO_SELECT = 0;
 
 	/* 
@@ -199,11 +203,13 @@ void init_adc()
 	 * Mode = 0; SW enabled, one-shot
 	 * Averaging = 0x3; 8 sample average
 	 * SEL_INP_SWC_3_0 = 0x6 = Channel 7
+         * SEL_INM_SWC_3_0 = 1xxx = VREFN (reduces noise in single ended mode)
 	 * use FIFO0
 	 */
 	ADC_TSC.STEPCONFIG3_bit.MODE = 0;
 	ADC_TSC.STEPCONFIG3_bit.AVERAGING = 3;
 	ADC_TSC.STEPCONFIG3_bit.SEL_INP_SWC_3_0 = 6;
+	ADC_TSC.STEPCONFIG3_bit.SEL_INM_SWC_3_0 = 8;
 	ADC_TSC.STEPCONFIG3_bit.FIFO_SELECT = 0;
 
 	/* 
@@ -211,11 +217,13 @@ void init_adc()
 	 * Mode = 0; SW enabled, one-shot
 	 * Averaging = 0x3; 8 sample average
 	 * SEL_INP_SWC_3_0 = 0x7= Channel 8
+         * SEL_INM_SWC_3_0 = 1xxx = VREFN (reduces noise in single ended mode)
 	 * use FIFO0
 	 */
 	ADC_TSC.STEPCONFIG4_bit.MODE = 0;
 	ADC_TSC.STEPCONFIG4_bit.AVERAGING = 3;
 	ADC_TSC.STEPCONFIG4_bit.SEL_INP_SWC_3_0 = 7;
+	ADC_TSC.STEPCONFIG4_bit.SEL_INM_SWC_3_0 = 8;
 	ADC_TSC.STEPCONFIG4_bit.FIFO_SELECT = 0;
 
 	/* 

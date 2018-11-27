@@ -46,7 +46,7 @@ PRU_ADC
        |--pru_adc_userspace.c userspace code that interacts with PRU0
 
 BUILD FIRMWARE & USERSPACE CODE
-$ cd <PATH_TO_PRU_SW_SUPPORT_PACKAGE>/examples/am335x/PRU_ADC/
+$ cd <PATH_TO_PRU_SW_SUPPORT_PACKAGE>/examples/am335x/PRU_ADC_onChip/
 $ make clean
 $ make
 $ cd pru_adc_userspace/
@@ -55,9 +55,9 @@ $ make
 
 LOAD FIRMWARE & USERSPACE CODE ONTO BOARD
 PRU firmware and ARM userspace code are generated in the gen/ folders of
-PRU_ADC/ and PRU_ADC/pru_adc_userspace/ respectively.
+PRU_ADC_onChip/ and PRU_ADC_onChip/pru_adc_userspace/ respectively.
 
-Load the PRU firmware PRU_ADC.out onto the BeagleBone Black at
+Load the PRU firmware PRU_ADC_onChip.out onto the BeagleBone Black at
 /lib/firmware/
 
 Load the ARM userspace code pru_adc_userspace onto the BeagleBone Black at

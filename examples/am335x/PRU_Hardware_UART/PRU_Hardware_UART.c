@@ -83,6 +83,12 @@ void main(void)
 	CT_UART.LCR = 3;
 
 	/* Enable loopback for test */
+	/*
+	 * NOTE!
+	 * loopback will prevent the UART from sending data to the output
+	 * pins. Remember to disable loopback in the MCR register before
+	 * looking for signals on your UART pins.
+	 */
 	CT_UART.MCR = 0x10;
 
 	/* Choose desired response to emulation suspend events by configuring

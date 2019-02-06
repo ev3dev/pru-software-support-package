@@ -31,6 +31,14 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+
+
+/*
+ * NOTE!
+ * This example is no longer supported. It interacts with ARM side code
+ * that no longer exists. It is only included as a potential reference.
+ */
+
 #include <stdint.h>
 #include <pru_cfg.h>
 #include <pru_ctrl.h>

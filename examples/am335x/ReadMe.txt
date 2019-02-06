@@ -20,6 +20,7 @@ WHAT EXAMPLES ARE INCLUDED?
 	EXAMPLE
 	---------
 	PRU_access_const_table
+	PRU_ADC_onChip
 	PRU_ARMtoPRU_Interrupt
 	PRU_Direct_Connect0
 	PRU_Direct_Connect1
@@ -41,6 +42,7 @@ ADDITIONAL RESOURCES
 	For more information about the PRU, visit:
 
 	PRU-ICSS Wiki            - http://processors.wiki.ti.com/index.php/PRU-ICSS
+	Linux SDK Support	 - http://software-dl.ti.com/processor-sdk-linux/esd/docs/latest/linux/index.html
 	PRU Training Slides      - http://www.ti.com/sitarabootcamp
 	PRU Evaluation Hardware  - http://www.ti.com/tool/PRUCAPE
 	Support                  - http://e2e.ti.com

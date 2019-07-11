@@ -50,6 +50,8 @@
 /* deprecated, define only for backward compatibility */
 #define TYPE_CUSTOM		5
 
+#define FW_RSC_ADDR_ANY ((uint32_t)-1)
+
 union fw_custom {
 	/* add custom resources here */
 	struct fw_rsc_custom_ints pru_ints;
